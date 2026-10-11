@@ -1,0 +1,9 @@
+vendor/lua: Lua 5.4.7, pristine
+  upstream: https://www.lua.org/ftp/lua-5.4.7.tar.gz (released 2024-06-13)
+  license: MIT, Copyright (C) 1994-2024 Lua.org, PUC-Rio (vendor/lua/doc/readme.html)
+vendor/lua-tests: the official Lua 5.4.7 test suite, pristine
+  upstream: https://www.lua.org/tests/lua-5.4.7-tests.tar.gz
+  test/luatests/prepare.mjs copies it to test/luatests/suite/ with the nine
+  lines that need io.stdin or io.input rewritten (a cart has no io library).
+Nothing in this directory is edited: the JIT's hooks in the Lua core are
+runtime/jit/lua-5.4.7-jit.patch, applied by build.sh to a copy in build/src-jit.

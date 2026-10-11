@@ -1,0 +1,7 @@
+build/
+obj/
+node_modules/
+test/luatests/suite/
+bench/gen/
+bench/engines/
+bench/scratch/

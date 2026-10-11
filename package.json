@@ -1,0 +1,25 @@
+{
+  "name": "lua-wasm-jit",
+  "version": "0.1.0",
+  "description": "A runtime JIT for Lua 5.4 running inside a wasmcart cart: hot bytecode functions become WebAssembly modules linked through the host",
+  "license": "MIT",
+  "repository": "github:monteslu/lua-wasm-jit",
+  "engines": {
+    "node": ">=22"
+  },
+  "files": [
+    "runtime/",
+    "LICENSE",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "./build.sh",
+    "test": "test/all.sh",
+    "test:jit": "node test/jit/run.mjs",
+    "test:lua": "node test/luatests/prepare.mjs && node test/luatests/diff.mjs",
+    "bench": "node bench/run.mjs"
+  },
+  "devDependencies": {
+    "wasmcart": "^0.34.2"
+  }
+}
